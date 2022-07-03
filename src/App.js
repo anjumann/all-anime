@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar/Navbar";
-import SearchAnime from "./view/Details/SearchAnime";
+import QuoteAnime from "./view/Details/QuoteAnime";
 import Home from "./view/home/Home";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="search" element={ <SearchAnime/> } />
+        <Route path="Quote" element={ <QuoteAnime/> } />
       </Routes>
 
     </>
