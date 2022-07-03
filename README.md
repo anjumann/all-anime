@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Anime Inc.
+
+[http://localhost:3000](https://anime-toolkit.web.app/)
 
 An online toolkit for Anime fans.
 
