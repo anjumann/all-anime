@@ -1,6 +1,6 @@
 # Anime Inc.
 
-[http://localhost:3000](https://anime-toolkit.web.app/)
+[https://anime-toolkit.web.app/](https://anime-toolkit.web.app/)
 
 An online toolkit for Anime fans.
 
