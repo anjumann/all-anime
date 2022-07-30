@@ -15,7 +15,7 @@ function Hero() {
                                 </h1>
                                 <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never been easier to build beautiful websites that convey your message and tell your story.</p>
                                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
-                                    <NavLink to="/" className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-red-600 rounded-md sm:mb-0 hover:bg-red-700 sm:w-auto text-center ">
+                                    <NavLink to="/Quote" className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-red-600 rounded-md sm:mb-0 hover:bg-red-700 sm:w-auto text-center ">
                                         Get Started !
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </NavLink>
