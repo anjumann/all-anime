@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import './App.css';
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Navbar";
 import QuoteAnime from "./view/Qoute/QuoteAnime";
 import Home from "./view/home/Home";
 import Details from "./view/Details";
@@ -10,8 +10,8 @@ import Stream from "./view/Stream";
 function App() {
   return (
     <>
-      <div className="scrollbar scrollbar-thumb-red-800 scrollbar-track-red-300" >
-        <Navbar />
+     
+        <Navbar   />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="Quote" element={<QuoteAnime />} />
@@ -19,7 +19,7 @@ function App() {
           <Route path="search/:keyword" element={<SearchPage />} />
           <Route path="stream" element={<Stream />} />
         </Routes>
-      </div>
+    
     </>
 
   );

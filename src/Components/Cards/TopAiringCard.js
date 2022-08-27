@@ -6,9 +6,10 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+
 import { NavLink } from 'react-router-dom';
 
-const RecentAnimeCard = ({ anime }) => {
+const TopAiringCard = ({ anime }) => {
     return (
         <>
             <NavLink to={`details/${anime.animeId}`}>
@@ -28,15 +29,13 @@ const RecentAnimeCard = ({ anime }) => {
 
                             <div className='text-left font-serif ' >
                                 <Typography>
-                                    Dub/Sub: {anime.subOrDub}
+                                    Latest Episode: {anime.latestEp}
                                 </Typography>
-                                <Typography >
-                                    <span className='' > Episode:</span> {anime.episodeNum}
-                                </Typography>
+                                {/* <Typography >
+                                <span className='' > Episode:</span> {anime.episodeNum}
+                            </Typography> */}
                             </div>
-                            {/* <NavLink to={`details/${anime.animeId}`} >
-                                <Button variant="outlined" color="red" className="mt-2"  >  Know more </Button>
-                            </NavLink> */}
+                            
                         </div>
                     </CardBody>
 
@@ -46,4 +45,4 @@ const RecentAnimeCard = ({ anime }) => {
     )
 }
 
-export default RecentAnimeCard
+export default TopAiringCard
