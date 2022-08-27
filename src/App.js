@@ -6,6 +6,7 @@ import Home from "./view/home/Home";
 import Details from "./view/Details";
 import SearchPage from "./view/SearchPage";
 import Stream from "./view/Stream";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="search/:keyword" element={<SearchPage />} />
           <Route path="stream" element={<Stream />} />
         </Routes>
+        <Footer/>
     
     </>
 
