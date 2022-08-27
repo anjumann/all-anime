@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SearchAnimeCard from '../../Components/Cards/SearchAnimeCard'
 import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const SearchPage = () => {
 
@@ -18,6 +19,9 @@ const SearchPage = () => {
                 // setEpisodeUrl(anime.episodesList[0].episodeUrl)
             }).catch(error => { console.log(error) })
     }
+    useEffect(()=>{
+        SearchAnime()
+    },keyword)
 
     return (
         <>

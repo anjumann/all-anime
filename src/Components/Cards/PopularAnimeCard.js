@@ -6,7 +6,7 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
-import {BiLinkExternal} from 'react-icons/bi'
+
 import { NavLink } from 'react-router-dom';
 
 const PopularAnimeCard = ({ anime }) => {
@@ -35,7 +35,7 @@ const PopularAnimeCard = ({ anime }) => {
                             </Typography> */}
                         </div>
                         <NavLink to={`details/${anime.animeId}`}  >
-                        <Button variant="outlined" color="red" className="mt-2"  > Know More <BiLinkExternal className='inline' /> </Button>
+                        <Button variant="outlined" color="red" className="mt-2"  > Know More </Button>
                         </NavLink>
                     </div>
                 </CardBody>
