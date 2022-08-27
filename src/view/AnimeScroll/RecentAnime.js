@@ -39,7 +39,7 @@ const RecentAnime = () => {
                     Recent Anime Release
                 </h1>
                 <div
-                    className="flex overflow-x-scroll pb-10 hide-scroll-bar"
+                    className="flex overflow-x-scroll pb-10 scrollbar scrollbar-thumb-red-800 scrollbar-track-red-300"
                 >
                     <div
                         className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "

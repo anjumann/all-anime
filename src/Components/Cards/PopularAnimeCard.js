@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import {BiLinkExternal} from 'react-icons/bi'
 
-const RecentAnimeCard = ({ anime }) => {
+const PopularAnimeCard = ({ anime }) => {
     return (
         <>
             <Card className="w-96 my-10 shadow-lg shadow-red-400 ">
@@ -27,13 +27,13 @@ const RecentAnimeCard = ({ anime }) => {
 
                         <div className='text-left font-serif ' >
                             <Typography>
-                                Dub/Sub: {anime.subOrDub}
+                                Release Year: {anime.releasedDate}
                             </Typography>
-                            <Typography >
+                            {/* <Typography >
                                 <span className='' > Episode:</span> {anime.episodeNum}
-                            </Typography>
+                            </Typography> */}
                         </div>
-                        <a href={anime.episodeUrl} target='blank' >
+                        <a href={anime.animeUrl} target='blank' >
                         <Button variant="outlined" color="red" className="mt-2"  > Watch Now <BiLinkExternal className='inline' /> </Button>
                         </a>
                     </div>
@@ -45,4 +45,4 @@ const RecentAnimeCard = ({ anime }) => {
     )
 }
 
-export default RecentAnimeCard
+export default PopularAnimeCard
