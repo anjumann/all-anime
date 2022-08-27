@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from "./Components/Navbar/Navbar";
 import QuoteAnime from "./view/Qoute/QuoteAnime";
 import Home from "./view/home/Home";
-import Details from "./view/Details/Details";
-import SearchPage from "./view/SearchPage/SearchPage";
-import Stream from "./view/Stream/Stream";
+import Details from "./view/Details";
+import SearchPage from "./view/SearchPage";
+import Stream from "./view/Stream";
 
 function App() {
   return (

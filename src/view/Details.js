@@ -18,24 +18,20 @@ const Details = () => {
         const temp = fetch(`https://gogoanime.herokuapp.com/streamsb/watch/` + animeEpisodeId)
             .then(res => res.json())
             .then(url => {
-                // setEpisodeUrl(url);
                 window.location.replace(url.headers.Referer);
-                // console.log(url.headers.Referer);
             }).catch(err => {
                 console.log(err)
             })
     }
 
-    
+
 
     const popularAnime = async () => {
         const temp = fetch(`https://gogoanime.herokuapp.com/anime-details/` + id)
             .then(response => response.json())
             .then(anime => {
-                // console.log(anime.genres)
                 setAnime(anime)
                 setGenre(anime.genres)
-                // setEpisodeUrl(anime.episodesList[0].episodeUrl)
                 setEpisode(anime.episodesList)
             }).catch(error => { console.log(error) })
     }
@@ -59,9 +55,9 @@ const Details = () => {
                             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{anime.animeTitle}</h1>
                             <div className="flex mb-4">
                                 <span className="flex flex-wrap items-center gap-2">
-                                    {/* {genre.map((genre, index) =>
+                                    {genre.map((genre, index) =>
                                         <span key={index} className="text-gray-500 border-2 rounded-lg px-2 py-1 ">{genre}</span>
-                                    )} */}
+                                    )}
 
                                 </span>
 
@@ -72,16 +68,20 @@ const Details = () => {
                             </div>
                             <div className="flex">
                                 <span className="title-font font-medium text-2xl text-gray-900">Episodes - {anime.totalEpisodes} </span>
-                                <a href={episodeUrl} target='blank' className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Watch now</a>
+                                {/* <a data-scroll-to="episodes"
+                                    href="#episode" target='blank' className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Watch now
+                                </a> */}
+
 
                             </div>
+
                         </div>
                     </div>
                 </div>
             </section>
             <hr />
             {/* table */}
-            <div className='text-center text-3xl my-4 ' >
+            <div id='episode' className='text-center text-3xl my-4 ' >
                 Episodes
             </div>
             <div className="overflow-x-auto md:w-8/12 mx-auto w-10/12 relative shadow-md sm:rounded-lg">
@@ -97,7 +97,7 @@ const Details = () => {
                             <th scope="col" className="py-3 px-6 text-center">
                                 Links
                             </th>
-                           
+
                         </tr>
                     </thead>
                     <tbody>
@@ -105,18 +105,24 @@ const Details = () => {
                             return (
                                 <tr key={index} className="bg-white border-b  border-gray-700">
                                     <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  text-center">
-                                        {episode.episodeNum}
+                                        <Button onClick={() => {
+                                            getStreamLink(episode.episodeId)
+                                        }} className="font-medium text-blue-600 hover:underline">{episode.episodeNum}</Button>
+
                                     </th>
                                     <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  text-center capitalize">
-                                        {episode.episodeId.replaceAll('-', ' ')}
+                                        <Button onClick={() => {
+                                            getStreamLink(episode.episodeId)
+                                        }} className="font-medium text-blue-600 hover:underline">{episode.episodeId.replaceAll('-', ' ')}</Button>
+
                                     </td>
                                     <td className="py-4 px-6 text-center">
                                         <Button onClick={() => {
                                             getStreamLink(episode.episodeId)
                                         }} className="font-medium text-blue-600 hover:underline">Watch/Download</Button>
                                     </td>
-                                    
-                                    
+
+
                                 </tr>
                             )
                         })}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SearchAnimeCard from '../../Components/Cards/SearchAnimeCard'
+import SearchAnimeCard from '../Components/Cards/SearchAnimeCard'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -38,6 +38,7 @@ const SearchPage = () => {
                     <div
                         className="flex flex-wrap lg:ml-40 md:ml-20 ml-10 "
                     >
+                        {anime.length===0?<h1>No Results Found</h1>:""}
                         {anime.map((anime, index) =>
                             <div className="mx-3">
                                 <SearchAnimeCard key={index} anime={anime} />
