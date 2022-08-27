@@ -5,6 +5,7 @@ import QuoteAnime from "./view/Qoute/QuoteAnime";
 import Home from "./view/home/Home";
 import Details from "./view/Details/Details";
 import SearchPage from "./view/SearchPage/SearchPage";
+import Stream from "./view/Stream/Stream";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="Quote" element={<QuoteAnime />} />
           <Route path="details/:id" element={<Details />} />
           <Route path="search/:keyword" element={<SearchPage />} />
+          <Route path="stream" element={<Stream />} />
         </Routes>
       </div>
     </>
