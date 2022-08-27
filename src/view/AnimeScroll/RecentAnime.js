@@ -25,7 +25,7 @@ const RecentAnime = () => {
         recentRelease();
     }, [])
 
-    console.log(recentAnime[0]);
+    // console.log(recentAnime[0]);
 
 
     return (

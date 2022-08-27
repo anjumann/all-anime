@@ -7,6 +7,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import {BiLinkExternal} from 'react-icons/bi'
+import { NavLink } from 'react-router-dom';
 
 const RecentAnimeCard = ({ anime }) => {
     return (
@@ -33,9 +34,9 @@ const RecentAnimeCard = ({ anime }) => {
                                 <span className='' > Episode:</span> {anime.episodeNum}
                             </Typography>
                         </div>
-                        <a href={anime.episodeUrl} target='blank' >
+                        <NavLink to={`details/${anime.animeId}`} >
                         <Button variant="outlined" color="red" className="mt-2"  > Watch Now <BiLinkExternal className='inline' /> </Button>
-                        </a>
+                        </NavLink>
                     </div>
                 </CardBody>
                 

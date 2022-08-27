@@ -8,8 +8,6 @@ import PopularAnimeCard from '../../Components/Cards/PopularAnimeCard';
 const PopularAnime = () => {
 
     const [popAnime, setPopAnime] = useState([]);
-
-
     const popularAnime = async () => {
         const temp = fetch('https://gogoanime.herokuapp.com/popular')
             .then(response => response.json())
@@ -17,15 +15,13 @@ const PopularAnime = () => {
                 // console.log(anime)
                 setPopAnime(anime)
             }).catch(error => { console.log(error) })
-
-
     }
 
     useEffect(() => {
         popularAnime();
     }, [])
 
-    console.log(popAnime[0]);
+    // console.log(popAnime[0]);
 
 
     return (

@@ -6,16 +6,16 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
-import {BiLinkExternal} from 'react-icons/bi'
+import { BiLinkExternal } from 'react-icons/bi'
 import { NavLink } from 'react-router-dom';
 
-const PopularAnimeCard = ({ anime }) => {
+const SearchAnimeCard = ({ anime }) => {
     return (
         <>
             <Card className="w-96 my-10 shadow-lg shadow-red-400 ">
                 <CardHeader color="red" className="relative h-56">
                     <img
-                        src={anime.animeImg}
+                        src='https://gogocdn.net/images/anime/One-piece.jpg'
                         alt="img-blur-shadow"
                         className="h-full w-full overflow-hidden object-cover"
                     />
@@ -28,22 +28,24 @@ const PopularAnimeCard = ({ anime }) => {
 
                         <div className='text-left font-serif ' >
                             <Typography>
-                                Release Year: {anime.releasedDate}
+                                {/* Release Year: {anime.releasedDate} */}
+                                something
                             </Typography>
                             {/* <Typography >
                                 <span className='' > Episode:</span> {anime.episodeNum}
                             </Typography> */}
                         </div>
-                        <NavLink to={`details/${anime.animeId}`}  >
-                        <Button variant="outlined" color="red" className="mt-2"  > Know More <BiLinkExternal className='inline' /> </Button>
-                        </NavLink>
+                        {/* <NavLink to={`details/${anime.animeId}`}  >
+                            <Button variant="outlined" color="red" className="mt-2"  > Know More <BiLinkExternal className='inline' /> </Button>
+                        </NavLink> */}
                     </div>
                 </CardBody>
-                
+
             </Card>
+
 
         </>
     )
 }
 
-export default PopularAnimeCard
+export default SearchAnimeCard
