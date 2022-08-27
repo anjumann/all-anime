@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import RecentAnimeCard from '../../Components/Cards/RecentAnimeCard';
 
 
+import { DataGrid } from '@mui/x-data-grid';
+
 
 
 const RecentAnime = () => {
@@ -52,15 +54,7 @@ const RecentAnime = () => {
                     </div>
                 </div>
             </div>
-            {/* <style>
-                .hide-scroll-bar {
-                    -ms - overflow - style: none;
-                scrollbar-width: none;
-}
-                .hide-scroll-bar::-webkit-scrollbar {
-                    display: none;
-}
-            </style> */}
+            
         </>
     )
 }
