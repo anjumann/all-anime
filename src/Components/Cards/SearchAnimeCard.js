@@ -1,18 +1,28 @@
-import React from 'react'
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    Typography,
-    Button,
-} from "@material-tailwind/react";
+import React, { useState, useEffect } from 'react'
+
 import { NavLink } from 'react-router-dom';
 
+
+
 const SearchAnimeCard = ({ anime }) => {
+
+    const [lg, setLg] = useState(false)
+    const [xl, setXl] = useState(false)
+    useEffect(() => {
+
+        if (anime.animeTitle.length > 20) {
+            setLg(true)
+            if (anime.animeTitle.length > 30) {
+                setXl(true);
+            }
+
+        }
+
+    }, [anime.animeTitle])
     return (
         <>
             <NavLink to={`/details/${anime.animeId}`}>
-                <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
+                {/* <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
                     <CardHeader color="red" className="relative h-56">
                         <img
                             src={anime.animeImg}
@@ -36,7 +46,16 @@ const SearchAnimeCard = ({ anime }) => {
                         </div>
                     </CardBody>
 
-                </Card>
+                </Card> */}
+                <div className="card w-64 md:w-72 bg-base-100 shadow-xl group  ">
+                    <figure className="px-10 pt-10">
+                        <img src={anime.animeImg} alt={anime.animeId} className="rounded-xl h-64 group-hover:scale-110 overflow-hidden transition-all duration-200 ease-out " />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className={`card-title mb-2 font-bold text-gray-800  ${xl ? 'text-base' : lg ? ('text-lg') : 'text-xl'} `} >{anime.animeTitle}</h2>
+                        <p>{anime.status}</p>
+                    </div>
+                </div>
             </NavLink>
 
         </>

@@ -17,43 +17,17 @@ const TopAiringCard = ({ anime }) => {
 
         }
 
-    }, [anime.Title])
+    }, [animeTitle])
     return (
         <>
             <NavLink to={`details/${animeId}`}>
-                {/* <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
-                    <CardHeader color="red" className="relative h-56">
-                        <img
-                            src={animeImg}
-                            alt="img-blur-shadow"
-                            className="h-full w-full overflow-hidden object-cover"
-                        />
-                    </CardHeader>
-                    <CardBody className="text-center">
-                        <Typography  className={`mb-2 font-bold text-gray-800  ${xl ? 'text-base' : lg?('text-lg'):'text-xl'} `}>
-                            {animeTitle}
-                        </Typography>
-                        <div className="flex justify-around">
-
-                            <div className='text-left font-serif ' >
-                                <Typography>
-                                    Latest Episode: {latestEp}
-                                </Typography>
-                                
-                            </div>
-                            
-                        </div>
-                    </CardBody>
-
-                </Card> */}
-
-                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+               <div className="card w-64 md:w-72 bg-base-100 shadow-xl group  ">
                     <figure className="px-10 pt-10">
-                        <img src={animeImg} alt={animeId} className="rounded-xl" />
+                        <img src={animeImg} alt={animeId} className="rounded-xl h-64 group-hover:scale-110 overflow-hidden transition-all duration-200 ease-out " />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className={`card-title mb-2 font-bold text-gray-800  ${xl ? 'text-base' : lg ? ('text-lg') : 'text-xl'} `} >{animeTitle}</h2>
+                        <p>Latest Episode: {latestEp}</p>
                     </div>
                 </div>
             </NavLink>
