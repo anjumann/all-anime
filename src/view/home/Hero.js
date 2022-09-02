@@ -13,7 +13,7 @@ function Hero() {
                                     <span className="block xl:inline">Find Tools related to </span>
                                     <span className="block text-red-600 xl:inline">Anime!</span>
                                 </h1>
-                                <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                                <p className="mx-auto text-base text-gray-800 sm:max-w-md lg:text-xl md:max-w-3xl">
                                     Find tools related to anime. Details about anime and movie.
                                 </p>
                                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">

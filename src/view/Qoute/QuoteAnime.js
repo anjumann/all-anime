@@ -6,7 +6,7 @@ import { AiOutlineWarning } from 'react-icons/ai';
 function QuoteAnime() {
 
 
-    const [quote, setQuote] = useState();
+    const [quote, setQuote] = useState(' Generate Quote ');
     const [anime, setAnime] = useState();
     const [character, setCharacter] = useState();
     const [characterS, setCharacterS] = useState();
@@ -16,9 +16,9 @@ function QuoteAnime() {
         const temp = await fetch(`https://animechan.vercel.app/api/random`)
             .then(response => response.json())
             .then(quote => {
-                setQuote(quote.quote);
                 setAnime(quote.anime);
                 setCharacter(quote.character);
+                setQuote(quote.quote);
             }).catch(error => {
                 console.log(error)
 
@@ -90,10 +90,10 @@ function QuoteAnime() {
                     {error ? <div className="text-red-600 rounded-md border-2 border-red-700 py-1.5 px-2.5 font-bold  ">
                         <AiOutlineWarning className='inline pr-2' size={30} />{error}
                     </div>
-                    :
-                    ""
+                        :
+                        ""
                     }
-                    
+
                     <input type="search" id="default-search" className=" m-5 p-4 w-1/3 text-sm text-gray-900 bg-gray-50 rounded-lg   " placeholder="Search by character/anime name..." onChange={(e) => setCharacterS(e.target.value)} />
                     <div>
 

@@ -6,14 +6,13 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
-import { BiLinkExternal } from 'react-icons/bi'
 import { NavLink } from 'react-router-dom';
 
 const SearchAnimeCard = ({ anime }) => {
     return (
         <>
             <NavLink to={`/details/${anime.animeId}`}>
-                <Card className="w-96 my-10 shadow-lg shadow-red-400 ">
+                <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
                     <CardHeader color="red" className="relative h-56">
                         <img
                             src={anime.animeImg}
@@ -31,13 +30,9 @@ const SearchAnimeCard = ({ anime }) => {
                                 <Typography>
                                     {anime.status}
                                 </Typography>
-                                {/* <Typography >
-                                <span className='' > Episode:</span> {anime.episodeNum}
-                            </Typography> */}
+                               
                             </div>
-                            {/* <NavLink to={`details/${anime.animeId}`}  >
-                            <Button variant="outlined" color="red" className="mt-2"  > Know More <BiLinkExternal className='inline' /> </Button>
-                        </NavLink> */}
+                            
                         </div>
                     </CardBody>
 

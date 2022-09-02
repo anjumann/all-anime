@@ -14,10 +14,10 @@ function Navbar() {
             title: "Quote",
             link: "/Quote",
         },
-        // {
-        //     title: "part2",
-        //     link: "/",
-        // },
+        {
+            title: "Explore",
+            link: "/explore",
+        },
         // {
         //     title: "part3",
         //     link: "/",
@@ -47,12 +47,12 @@ function Navbar() {
                         <NavLink to="/" className="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">
                             <span className="mx-auto text-xl font-black leading-none text-gray-900 select-none">Anime Inc<span className="text-red-600">.</span></span>
                         </NavLink>
-                        <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
+                        <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l-2  md:border-gray-600">
 
                             {menu.map((index, key) => {
                                 return (
                                     <>
-                                        <NavLink to={index.link} key={key} className="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">{index.title}</NavLink>
+                                        <NavLink to={index.link} key={key} className="mr-5 font-medium leading-6 text-gray-900">{index.title}</NavLink>
                                     </>
                                 )
                             })}
