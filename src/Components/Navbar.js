@@ -41,7 +41,7 @@ function Navbar() {
 
     return (
         <>
-            <section className="w-full sticky top-0 px-8 bg-red-100/40 backdrop-blur-sm text-gray-700 drop-shadow-xl z-50 ">
+            <section className="w-full sticky top-0 px-8 bg-red-500/30 backdrop-blur-sm text-gray-700 drop-shadow-xl z-50 ">
                 <div className="container left-0 right-0 flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl  ">
                     <div className="relative flex flex-col md:flex-row  ">
                         <NavLink to="/" className="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">

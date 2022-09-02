@@ -1,13 +1,4 @@
-import React ,{useState, useEffect} from 'react'
-
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    Typography,
-    Button,
-} from "@material-tailwind/react";
-
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 
 const TopAiringCard = ({ anime }) => {
@@ -30,7 +21,7 @@ const TopAiringCard = ({ anime }) => {
     return (
         <>
             <NavLink to={`details/${animeId}`}>
-                <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
+                {/* <Card className="w-64 md:w-96 my-10 shadow-lg shadow-red-400 ">
                     <CardHeader color="red" className="relative h-56">
                         <img
                             src={animeImg}
@@ -48,15 +39,23 @@ const TopAiringCard = ({ anime }) => {
                                 <Typography>
                                     Latest Episode: {latestEp}
                                 </Typography>
-                                {/* <Typography >
-                                <span className='' > Episode:</span> {anime.episodeNum}
-                            </Typography> */}
+                                
                             </div>
                             
                         </div>
                     </CardBody>
 
-                </Card>
+                </Card> */}
+
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                        <img src={animeImg} alt={animeId} className="rounded-xl" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Shoes!</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                    </div>
+                </div>
             </NavLink>
         </>
     )
